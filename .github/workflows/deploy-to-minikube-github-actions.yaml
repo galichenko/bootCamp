@@ -25,6 +25,9 @@ jobs:
     - name: Test service URLs
       run: |
           kubectl get pods -A
+          sleep 20
+          kubectl get pods -A
+          kubectl describe svc nodejs-app
           minikube service list
           minikube service nodejs-app --url
 
